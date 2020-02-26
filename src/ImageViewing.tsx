@@ -81,13 +81,6 @@ function ImageViewing({
   );
 
   return (
-    <Modal
-      transparent
-      visible={visible}
-      animationType={animationType}
-      onRequestClose={onRequestCloseEnhanced}
-      supportedOrientations={["portrait"]}
-    >
       <View style={[styles.container, { opacity, backgroundColor }]}>
         <Animated.View style={[styles.header, { transform: headerTransform }]}>
           {typeof HeaderComponent !== "undefined" ? (
@@ -137,8 +130,7 @@ function ImageViewing({
             })}
           </Animated.View>
         )}
-      </View>
-    </Modal>
+      </View> 
   );
 }
 
